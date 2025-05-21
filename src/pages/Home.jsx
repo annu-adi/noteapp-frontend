@@ -75,7 +75,7 @@ console.log(error)
 
     const deleteNote = async (id) => {
          try{
-    const response = await axios.delete(https://vercel.com/rashmis-projects-3cacc26c/noteapp-frontend-7b1h/api/note/${id}`,
+    const response = await axios.delete(`https://vercel.com/rashmis-projects-3cacc26c/noteapp-frontend-7b1h/api/note/${id}`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`
