@@ -21,7 +21,7 @@ const ContextProvider = ({children}) => {
     useEffect(() => {
       const verifyUser = async () => {
         try{
-         const res = await axios.get('https://vercel.com/rashmis-projects-3cacc26c/noteapp-frontend-7b1h/api/auth/verify', {
+         const res = await axios.get("https://vercel.com/rashmis-projects-3cacc26c/noteapp-frontend-7b1h/api/auth/verify", {
           headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         } 
