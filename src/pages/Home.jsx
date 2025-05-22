@@ -30,7 +30,7 @@ setFilteredNote(
 },[query, notes])
 const fetchNotes = async () => {
   try{
-    const {data} = await axios.get("https://vercel.com/rashmis-projects-3cacc26c/noteapp-frontend-7b1h/api/note", {
+    const {data} = await axios.get("http://localhost:5000/api/note", {
       headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         } 
@@ -53,7 +53,7 @@ console.log(error)
   }
   const addNote = async (title, description) => {
   try{
-    const response = await axios.post("https://vercel.com/rashmis-projects-3cacc26c/noteapp-frontend-7b1h/api/note/add",
+    const response = await axios.post("http://localhost:5000/api/note/add",
       { title, description }, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -75,7 +75,7 @@ console.log(error)
 
     const deleteNote = async (id) => {
          try{
-    const response = await axios.delete(`https://vercel.com/rashmis-projects-3cacc26c/noteapp-frontend-7b1h/api/note/${id}`,
+    const response = await axios.delete(`http://localhost:5000/api/note/${id}`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -96,7 +96,7 @@ console.log(error)
 
     const editNote = async (id, title, description) =>{
         try{
-    const response = await axios.put(`https://vercel.com/rashmis-projects-3cacc26c/noteapp-frontend-7b1h/api/note/${id}`,
+    const response = await axios.put(`http://localhost:5000/api/note/${id}`,
       { title, description }, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`
