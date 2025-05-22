@@ -14,7 +14,7 @@ const Signup = () => {
     const handleSubmit = async (e) =>{
         e.preventDefault();
         try{
-       const response = await axios.post("http://localhost:5000/api/auth/register",{name, email, password}
+       const response = await axios.post("https://noteapp-backend-rho.vercel.app/api/auth/register",{name, email, password}
 
        );
        if(response.data.success){
